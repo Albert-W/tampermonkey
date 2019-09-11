@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://www.shanbay.com/bdc/review/
+// @match        https://web.shanbay.com/wordsweb/
 // @grant        none
 // ==/UserScript==
 
@@ -12,22 +12,6 @@
 (function () {
     'use strict';
 
-    // window.onload = function () {
-    // const definition = document.querySelectorAll('td.definition>div');
-
-    // document.addEventListener('keydown',event =>{
-    //     console.log(event.key)
-    //     switch (event.key){
-    //         case 'Enter':
-    //         for(let i=0;i<definition.length;i++){
-    //             definition[i].hidden=true;
-    //             //style.visibility = "hidden";
-    //             //display = "none";
-    //         }
-    //     }
-    // }
-    // )
-    // }
 
     var toggiecndf = function (){
         var cndf = document.querySelector('.cndf>span');
