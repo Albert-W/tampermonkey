@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Shanbay display
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  try to take over the world!
 // @author       You
 // @match        https://web.shanbay.com/wordsweb/
@@ -36,12 +36,30 @@
 
         }
     };
+
+    // get the list of wrong item and repeatly pronounce it; 
+    var i = 0;
+    var pronounce = function(){
+        var wrongItems = document.querySelectorAll('.wrong');
+        if (wrongItems.length != 0){
+            wrongItems[i].querySelector('img').click();
+            i=i+1;
+            if(i>=wrongItems.length ){
+                i=0;
+            }
+        } 
+    }
+
     //添加键盘事件
     document.body.addEventListener('keydown',event => {
         switch (event.key){
             case 'Enter':
                 toggleTable();
                 // toggiecndf();
+                break;
+            case 'p':
+                // pronounce the word.
+                pronounce();
                 break;
         }
     }
