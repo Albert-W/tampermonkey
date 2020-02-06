@@ -14,11 +14,8 @@
     //添加键盘事件
     document.body.addEventListener('keydown',event => {
         var sub = document.querySelector(".c-player-subtitle-question")
-
         var a = document.querySelectorAll("div.c-player-answer.o-player__answer")  
-        
         var d = document.querySelector('.c-player-next.o-player__next')
-
         var r = document.querySelector('.c-player-play.o-player__play')
         var v = document.querySelector('.o-player__like-container')
 

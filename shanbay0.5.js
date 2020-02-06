@@ -4,7 +4,7 @@
 // @version      0.5
 // @description  try to take over the world!
 // @author       You
-// @match        https://web.shanbay.com/wordsweb/
+// @match        https://web.shanbay.com/wordsweb/*
 // @grant        none
 // ==/UserScript==
 
