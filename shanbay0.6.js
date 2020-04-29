@@ -41,9 +41,17 @@
             i=i+1;
         }
 
-        // 为了单手操作, 复写p快捷键
+        // 为了单手操作, 复写p快捷键，单词背诵页的朗读
         var voice = document.querySelectorAll('.index_audio__2-vMp')
-        voice[1].querySelector('img').click()
+        if (voice.length !=0){
+            voice[1].querySelector('img').click()
+        }
+        // 单词详情页的朗读
+        var voice2= document.querySelectorAll('.Pronounce_audio__3xdMh')
+        if (voice2.length !=0){
+            voice2[1].click()
+        }
+
     }
 
     // 复写9快捷键
