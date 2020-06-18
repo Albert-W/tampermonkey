@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Shanbay display
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      0.7
 // @description  try to take over the world!
 // @author       You
 // @match        https://web.shanbay.com/wordsweb/*
@@ -46,10 +46,10 @@
         if (voice.length !=0){
             voice[1].querySelector('img').click()
         }
-        // 单词详情页的朗读
-        var voice2= document.querySelectorAll('.Pronounce_audio__3xdMh')
+        // 单词详情页的朗读，且不影响table页
+        var voice2= document.querySelectorAll('.VocabPronounce_mlr10__3TCZu')
         if (voice2.length !=0){
-            voice2[1].click()
+            voice2[1].querySelector('img').click()
         }
 
     }
@@ -94,14 +94,14 @@
                 pronounceExam();
                 break;
             case '5':
-                // pronunce the example.
+                //delete
                 delete9();
                 break;
         }
     }
     )
     //当DOM树改变时触发，适合处理异步网页
-    // 初始化配置
+    // 隐藏中文总结
     document.body.addEventListener("DOMSubtreeModified",function(){
         // var cndf = document.querySelector('.cndf>span');
         // if(cndf){
