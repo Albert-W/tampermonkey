@@ -46,10 +46,10 @@
         if (voice.length !=0){
             voice[1].querySelector('img').click()
         }
-        // 单词详情页的朗读
-        var voice2= document.querySelectorAll('.Pronounce_audio__3xdMh')
+        // 单词详情页的朗读，且不影响table页
+        var voice2= document.querySelectorAll('.VocabPronounce_mlr10__3TCZu')
         if (voice2.length !=0){
-            voice2[1].click()
+            voice2[1].querySelector('img').click()
         }
 
     }
@@ -94,7 +94,7 @@
                 pronounceExam();
                 break;
             case '5':
-                // pronunce the example.
+                // delete.
                 delete9();
                 break;
         }
