@@ -1,0 +1,21 @@
+// ==UserScript==
+// @name         Jenkins Background
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://fem41s11-eiffel004.eiffel.gic.ericsson.se:8443/jenkins/job/BRO_Service_PCR/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    // Your code here...
+    document.body.addEventListener("DOMSubtreeModified",function(){
+        var pop = document.getElementsByClassName("Stage Logs")[0];
+        var dialog = document.getElementsByClassName("cbwf-dialog")[0];
+        pop.style.marginTop = "80px";
+        dialog.style.background = "palegreen";
+    });
+
+
+})();
