@@ -21,24 +21,25 @@
 
         switch (event.key){
 
-            case 'e':
+            case 'e': // show options
                 sub.click()
                 break;
-            case 'a':
+            case 'a': // choose 1st
                 a[0].click();
                 break;    
-            case 's':
+            case 's': // choose 2nd
                 a[1].click();
                 break;    
-            case 'd':
+            case 'd': // next one
                 d.click();
                 break;
-            case 'r':
+            case 'r': //replay
                 r.click();
                 break;  
-            case 'v':
+            case 'v': // mark as like or dislike
                 v.click();
-                break;      
+                break;     
+
         }
     }
     )
